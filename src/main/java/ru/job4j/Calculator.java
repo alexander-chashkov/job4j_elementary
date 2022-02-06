@@ -6,6 +6,11 @@ public class Calculator {
         int two = 2;
         int onePlusTwo = one + two;
         System.out.println(onePlusTwo);
+
+        int size = 10;
+        size = 100;
+        size = size - 5;
+
         int six = 6;
         int four = 4;
         int five = 5;
@@ -15,8 +20,6 @@ public class Calculator {
         System.out.println(sixDivTwo);
         System.out.println(fiveMinusTwo);
         System.out.println(fourTimeTwo);
-        int size = 10;
-        size = 100;
-        size = size - 5;
+
     }
 }
