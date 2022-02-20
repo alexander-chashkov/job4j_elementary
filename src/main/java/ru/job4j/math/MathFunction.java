@@ -1,6 +1,5 @@
 package ru.job4j.math;
 
-
 /**
  * @author alex_chashkov
  * @created 20/02/2022 - 21:34
@@ -20,7 +19,7 @@ public class MathFunction {
         return first - second;
     }
 
-    public static double division (double first, double second) {
+    public static double division(double first, double second) {
         return first / second;
     }
 }
