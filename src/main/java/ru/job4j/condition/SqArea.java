@@ -14,7 +14,7 @@ public class SqArea {
     }
 
     public static void main(String[] args) {
-        double result1 = SqArea.square(45, 1);
+        double result1 = SqArea.square(6, 2);
         System.out.println(" p = 45, k = 1, s = 1, real = " + result1);
     }
 }
