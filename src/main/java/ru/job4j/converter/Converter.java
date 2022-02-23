@@ -26,8 +26,8 @@ public class Converter {
         float out = Converter.rubleToEuro(in);
         boolean passed = expected == out;
         System.out.println("140 rubles are 2. Test result : " + passed);
-        in = 180;
-        expected = 3;
+        in = 240;
+        expected = 4;
         out = Converter.rubleToDollar(in);
         passed = expected == out;
         System.out.println("180 rubles are 3. Test result : " + passed);
