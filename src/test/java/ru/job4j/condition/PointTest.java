@@ -33,7 +33,7 @@ public class PointTest {
     }
 
     @Test
-    public void whenMinus10to20then7dot() {
+    public void whenMinus10to20then7dot81() {
         double expected = 7.81;
         int x1 = -1;
         int y1 = 0;
