@@ -1,0 +1,34 @@
+package ru.job4j.condition;
+
+/**
+ * @author alex_chashkov
+ * @created 28/03/2022 - 18:21
+ * @project job4j
+ */
+public class LogicNot {
+
+    public static boolean isEven(int num) {
+        return num % 2 == 0;
+    }
+
+    public static boolean isPositive(int num) {
+        return num > 0;
+    }
+
+    public static boolean notEven(int num) {
+        return !isEven(num);
+    }
+
+    public static boolean notPositive(int num) {
+        return !isPositive(num);
+    }
+
+    public static boolean notEvenAndPositive(int num) {
+        return notEven(num) && isPositive(num);
+    }
+
+    public static boolean evenOrNotPositive(int num) {
+        return isEven(num) || notPositive(num);
+    }
+
+}
