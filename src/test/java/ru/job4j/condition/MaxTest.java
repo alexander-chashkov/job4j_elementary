@@ -38,7 +38,7 @@ public class MaxTest {
     }
 
     @Test
-    public void whenMax8_5_3Then8() {
+    public void whenMax853Then8() {
         int one = 8;
         int two = 5;
         int three = 3;
@@ -48,7 +48,7 @@ public class MaxTest {
     }
 
     @Test
-    public void whenMax12_17_3_22Then22() {
+    public void whenMax1217322Then22() {
         int one = 12;
         int two = 17;
         int three = 3;
