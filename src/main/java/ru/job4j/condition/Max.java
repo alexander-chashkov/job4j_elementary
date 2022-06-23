@@ -13,12 +13,12 @@ public class Max {
     }
 
     public static int max(int one, int two, int three) {
-        int result = max(one, two) > three ? max(one, two) : three;
+        int result = max(one, max(two, three));
         return result;
     }
 
     public static int max(int one, int two, int three, int four) {
-        int result = max(one, two, three) > four ? max(one, two, three) : four;
+        int result = max(one, two, max(three, four));
         return result;
     }
 }
