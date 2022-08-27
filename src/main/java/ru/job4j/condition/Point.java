@@ -14,8 +14,8 @@ public class Point {
         this.y = second;
     }
 
-    public static double distance(Point p1, Point p2) {
-        double rsl = Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
+    public static double distance(Point pFrom, Point pTo) {
+        double rsl = Math.sqrt(Math.pow(pTo.x - pFrom.x, 2) + Math.pow(pTo.y - pFrom.y, 2));
         return rsl;
     }
 
