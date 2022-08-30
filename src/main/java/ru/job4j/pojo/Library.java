@@ -35,8 +35,9 @@ public class Library {
             System.out.println(books[i].getName() + "| страниц: " + books[i].getCountPage());
         }
         for (int i = 0; i < books.length; i++) {
-            if (books[i].equals(b))
+            if (books[i].equals(b)) {
                 System.out.println(books[i].getName() + "| страниц: " + books[i].getCountPage());
+            }
         }
     }
 }
