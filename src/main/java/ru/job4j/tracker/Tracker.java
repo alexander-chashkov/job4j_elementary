@@ -45,4 +45,15 @@ public class Tracker {
         }
         return Arrays.copyOf(result, idx);
     }
+
+    public boolean replace(int id, Item item) {
+        for (int i = 0; i < size; i++) {
+            if (items[i].getId() == id) {
+                item.setId(id);
+                items[i] = item;
+                return true;
+            }
+        }
+        return false;
+    }
 }
