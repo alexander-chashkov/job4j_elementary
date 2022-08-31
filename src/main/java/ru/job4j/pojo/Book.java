@@ -11,6 +11,11 @@ public class Book {
     private String name;
     private int countPage;
 
+    public Book(String name, int countPage) {
+        this.name = name;
+        this.countPage = countPage;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
