@@ -46,14 +46,20 @@ public class Tracker {
         return Arrays.copyOf(result, idx);
     }
 
-    public boolean replace(int id, Item item) {
-        for (int i = 0; i < size; i++) {
-            if (items[i].getId() == id) {
-                item.setId(id);
-                items[i] = item;
-                return true;
+    private int indexOf(int id) {
+        int rsl = -1;
+        for (int index = 0; index < size; index++) {
+            if (items[index].getId() == id) {
+                rsl = index;
+                break;
             }
         }
+        return rsl;
+    }
+
+    public boolean replace(int id, Item item) {
+        item.setId(id);
+        items[indexOf(id)] = item;
         return false;
     }
 }
