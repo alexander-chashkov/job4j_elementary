@@ -62,4 +62,17 @@ public class Tracker {
         items[indexOf(id)] = item;
         return false;
     }
+
+    public boolean delete(int id) {
+        int idx = indexOf(id);
+        if (idx < 0) {
+            return false;
+        } else {
+            size--;
+            for (int i = idx; i < size; i++) {
+                items[i] = items[i + 1];
+            }
+        }
+        return true;
+    }
 }
