@@ -75,10 +75,9 @@ public class Tracker {
             System.out.println("Не найден элемент с ID " + id);
             return false;
         }
+        System.arraycopy(items, idx + 1, items, idx, idx + 1 + size - idx - 1);
+        items[size - 1] = null;
         size--;
-        for (int i = idx; i < size; i++) {
-            items[i] = items[i + 1];
-        }
         return true;
     }
 }
