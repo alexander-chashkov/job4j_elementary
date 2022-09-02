@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author alex_chashkov
  * @created 30/08/2022 - 21:40
  * @project job4j
- * fix
+ * fix2
  */
 public class Tracker {
     private final Item[] items = new Item[100];
