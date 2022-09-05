@@ -70,13 +70,12 @@ public class Tracker {
 
     public boolean delete(int id) {
         int idx = indexOf(id);
-        if (idx < 0) {
-            System.out.println("Не найден элемент с ID " + id);
-            return false;
+        boolean rsl = idx != -1;
+        if (rsl) {
+            System.arraycopy(items, idx + 1, items, idx, size - idx - 1);
+            items[size - 1] = null;
+            size--;
         }
-        System.arraycopy(items, idx + 1, items, idx, idx + 1 + size - idx - 1);
-        items[size - 1] = null;
-        size--;
         return true;
     }
 }
