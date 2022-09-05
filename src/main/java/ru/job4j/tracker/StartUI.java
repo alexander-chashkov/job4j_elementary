@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class StartUI {
     private Scanner scanner;
     private Tracker tracker;
+
     public void init(Scanner scanner, Tracker tracker) {
         this.scanner = scanner;
         this.tracker = tracker;
