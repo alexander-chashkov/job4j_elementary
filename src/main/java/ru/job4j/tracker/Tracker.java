@@ -59,14 +59,13 @@ public class Tracker {
     }
 
     public boolean replace(int id, Item item) {
-        item.setId(id);
         int idx = indexOf(id);
-        if (idx < 0) {
-            System.out.println("Не найден элемент с ID " + id);
-            return false;
+        boolean rsl = idx != -1;
+        if (rsl) {
+            item.setId(id);
+            items[idx] = item;
         }
-        items[indexOf(id)] = item;
-        return true;
+        return rsl;
     }
 
     public boolean delete(int id) {
