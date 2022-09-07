@@ -1,5 +1,12 @@
 package ru.job4j.tracker;
 
+/**
+ * @author alex_chashkov
+ * @created 07/09/2022 - 20:55
+ * @project job4j
+ * fix
+ */
+
 import java.util.Scanner;
 
 public class StartUI {
