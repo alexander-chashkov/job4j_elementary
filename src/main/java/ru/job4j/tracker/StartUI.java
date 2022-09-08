@@ -16,15 +16,15 @@ public class StartUI {
             if (select == 0) {
                 StartUI.createItem(input, tracker);
             } else if (select == 1) {
-                showAllItems(tracker);
+                StartUI.showAllItems(tracker);
             } else if (select == 2) {
                 StartUI.editItem(input, tracker);
             } else if (select == 3) {
                 StartUI.deleteItem(input, tracker);
             } else if (select == 4) {
-                findItemById(input, tracker);
+                StartUI.findItemById(input, tracker);
             } else if (select == 5) {
-                findItemByName(input, tracker);
+                StartUI.findItemByName(input, tracker);
             } else if (select == 6) {
                 run = false;
             }
@@ -39,7 +39,7 @@ public class StartUI {
         System.out.println("Добавленная заявка: " + item);
     }
 
-    private void showAllItems(Tracker tracker) {
+    private static void showAllItems(Tracker tracker) {
         System.out.println("=== Show all items ===");
         Item[] items = tracker.findAll();
         if (items.length > 0) {
@@ -73,7 +73,7 @@ public class StartUI {
         }
     }
 
-    private void findItemById(Input input, Tracker tracker) {
+    public static void findItemById(Input input, Tracker tracker) {
         System.out.println("=== Find item by id ===");
         int id = input.askInt("Enter id: ");
         Item item = tracker.findById(id);
@@ -84,7 +84,7 @@ public class StartUI {
         }
     }
 
-    private void findItemByName(Input input, Tracker tracker) {
+    public static void findItemByName(Input input, Tracker tracker) {
         System.out.println("=== Find items by name ===");
         String name = input.askStr("Enter name: ");
         Item[] items = tracker.findByName(name);
