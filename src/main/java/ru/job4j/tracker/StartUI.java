@@ -8,12 +8,7 @@ package ru.job4j.tracker;
  */
 
 public class StartUI {
-    private Input input;
-    private Tracker tracker;
-
     public void init(Input input, Tracker tracker) {
-        this.input = input;
-        this.tracker = tracker;
         boolean run = true;
         while (run) {
             showMenu();
@@ -21,15 +16,15 @@ public class StartUI {
             if (select == 0) {
                 StartUI.createItem(input, tracker);
             } else if (select == 1) {
-                showAllItems();
+                showAllItems(tracker);
             } else if (select == 2) {
                 StartUI.editItem(input, tracker);
             } else if (select == 3) {
                 StartUI.deleteItem(input, tracker);
             } else if (select == 4) {
-                findItemById();
+                findItemById(input, tracker);
             } else if (select == 5) {
-                findItemByName();
+                findItemByName(input, tracker);
             } else if (select == 6) {
                 run = false;
             }
@@ -44,7 +39,7 @@ public class StartUI {
         System.out.println("Добавленная заявка: " + item);
     }
 
-    private void showAllItems() {
+    private void showAllItems(Tracker tracker) {
         System.out.println("=== Show all items ===");
         Item[] items = tracker.findAll();
         if (items.length > 0) {
@@ -78,7 +73,7 @@ public class StartUI {
         }
     }
 
-    private void findItemById() {
+    private void findItemById(Input input, Tracker tracker) {
         System.out.println("=== Find item by id ===");
         int id = Integer.parseInt(input.askStr("Enter id: "));
         Item item = tracker.findById(id);
@@ -89,7 +84,7 @@ public class StartUI {
         }
     }
 
-    private void findItemByName() {
+    private void findItemByName(Input input, Tracker tracker) {
         System.out.println("=== Find items by name ===");
         String name = input.askStr("Enter name: ");
         Item[] items = tracker.findByName(name);
