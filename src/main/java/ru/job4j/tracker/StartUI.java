@@ -34,7 +34,7 @@ public class StartUI {
     public static void main(String[] args) {
         Output out = new ConsoleOutput();
         UserAction[] actions = {
-                new CreateAction(out), new ShowAllAction(out), new EditAction(), new DeleteAction(out), new FindByIdAction(out),
+                new CreateAction(out), new ShowAllAction(out), new EditAction(out), new DeleteAction(out), new FindByIdAction(out),
                 new FindByNameAction(out), new ExitAction(out)
         };
         new StartUI(out).init(new ConsoleInput(), new Tracker(), actions);
