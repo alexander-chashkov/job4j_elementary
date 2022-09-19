@@ -1,7 +1,9 @@
 package ru.job4j.ex;
 
 import java.util.Arrays;
-
+/**
+ * fix
+ */
 public class BackArray {
     public static void main(String[] args) {
         String[] names = {"Petr", "Ivan", "Nik", "Vasya"};
