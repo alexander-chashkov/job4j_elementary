@@ -10,7 +10,7 @@ public class FindEl {
             }
         }
         if (rsl == -1) {
-            throw new ElementNotFoundException();
+            throw new ElementNotFoundException("Ошибка. Нет элемента с таким ключом");
         }
         return rsl;
     }
@@ -19,7 +19,7 @@ public class FindEl {
         try {
             int idx = indexOf(new String[] {"Test", "Super"}, "key");
         } catch (ElementNotFoundException e) {
-            System.out.println("Ошибка. Нет элемента с таким ключом.");
+            System.out.println(e.getMessage());
         }
     }
 }
