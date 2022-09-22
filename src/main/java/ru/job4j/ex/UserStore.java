@@ -8,12 +8,12 @@ public class UserStore {
                 return us;
             }
         }
-        throw new UserNotFoundException();
+        throw new UserNotFoundException("пользователь не найден");
     }
 
     public static boolean validate(User user) throws UserInvalidException {
         if (!user.isValid() || user.getUsername().length() < 3) {
-            throw new UserInvalidException();
+            throw new UserInvalidException("пользователь не валидный");
         }
         return true;
     }
@@ -28,9 +28,9 @@ public class UserStore {
                 System.out.println("This user has an access");
             }
         } catch (UserInvalidException e) {
-            System.out.println("пользователь не валидный");
+            System.out.println(e.getMessage());
         } catch (UserNotFoundException e) {
-            System.out.println("пользователь не найден");
+            System.out.println(e.getMessage());
         }
 
     }
