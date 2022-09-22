@@ -41,7 +41,7 @@ public class StartUI {
                 new CreateAction(out), new ShowAllAction(out), new EditAction(out), new DeleteAction(out), new FindByIdAction(out),
                 new FindByNameAction(out), new ExitAction(out)
         };
-        new StartUI(out).init(new ValidateInput(), new Tracker(), actions);
+        new StartUI(out).init(new ValidateInput(out, new ConsoleInput()), new Tracker(), actions);
     }
 }
 
