@@ -22,7 +22,11 @@ public class ValidateInput implements Input  {
         do {
             try {
                 value = in.askInt(question);
-                invalid = false;
+                if (value < 0) {
+                    out.println("Введено отрицательное число. Повторите ввод.");
+                } else {
+                    invalid = false;
+                }
             } catch (NumberFormatException nfe) {
                 out.println("Please enter validate data again.");
             }
