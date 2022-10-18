@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class PasswordValidator {
+    //fix
 
     public static String validate(String password) {
         if (password == null) {
