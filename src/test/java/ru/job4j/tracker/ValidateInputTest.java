@@ -27,16 +27,4 @@ class ValidateInputTest {
         selected = input.askInt("Enter menu:");
         assertThat(selected).isEqualTo(Integer.valueOf(answers[1]));
     }
-
-    @Test
-    public void whenNegativNumberInput() {
-        Output out = new StubOutput();
-        Input in = new StubInput(
-                new String[] {"-1", "1"}
-        );
-        ValidateInput input = new ValidateInput(out, in);
-        String ln = System.lineSeparator();
-        int selected = input.askInt("Enter menu:");
-        assertThat(out.toString()).isEqualTo("Введено отрицательное число. Повторите ввод." + ln);
-    }
 }
