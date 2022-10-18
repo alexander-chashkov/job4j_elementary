@@ -22,10 +22,10 @@ class ValidateInputTest {
         String[] answers = new String[]{"1", "2"};
         Input in = new StubInput(answers);
         ValidateInput input = new ValidateInput(out, in);
-        for (String answer : answers) {
-            int selected = input.askInt("Enter menu:");
-            assertThat(selected).isEqualTo(Integer.valueOf(answer));
-        }
+        int selected = input.askInt("Enter menu:");
+        assertThat(selected).isEqualTo(Integer.valueOf(answers[0]));
+        selected = input.askInt("Enter menu:");
+        assertThat(selected).isEqualTo(Integer.valueOf(answers[1]));
     }
 
     @Test
