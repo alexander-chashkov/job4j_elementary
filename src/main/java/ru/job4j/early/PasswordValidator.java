@@ -9,7 +9,7 @@ public class PasswordValidator {
         if (password == null) {
             throw new IllegalArgumentException("Пустой пароль.");
         }
-        if (!(password.length() >= 8 && password.length() <= 32)) {
+        if (password.length() < 8 || password.length() > 32) {
             throw new IllegalArgumentException("Пароль слишком короткий/длинный.");
         }
         if (!isUpperAnyLetter(password)) {
