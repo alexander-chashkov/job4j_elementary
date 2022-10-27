@@ -4,7 +4,6 @@ import ru.job4j.tracker.Item;
 import ru.job4j.tracker.Tracker;
 
 public class SingleTracker {
-    //fix
     private static SingleTracker instance = null;
 
     private SingleTracker() {
